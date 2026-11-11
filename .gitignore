@@ -1,0 +1,6 @@
+/target
+**/*.rs.bk
+*.log
+.env
+cookie.txt
+account.json

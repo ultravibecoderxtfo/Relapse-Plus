@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="relapse-dark" name="Relapse Dark" version="1.0" _section="Relapse">
+  <author>Relapse</author>
+  <description>Graphite editor scheme for the Relapse executor UI.</description>
+
+  <color name="bg"        value="#1e1e1e"/>
+  <color name="gutter"    value="#1e1e1e"/>
+  <color name="fg"        value="#d4d4d4"/>
+  <color name="dim"       value="#6f6f6f"/>
+  <color name="line"      value="#282828"/>
+  <color name="selection" value="#264f78"/>
+  <color name="comment"   value="#6a9955"/>
+  <color name="keyword"   value="#c586c0"/>
+  <color name="control"   value="#d8a0e0"/>
+  <color name="string"    value="#ce9178"/>
+  <color name="number"    value="#b5cea8"/>
+  <color name="function"  value="#dcdcaa"/>
+  <color name="type"      value="#4ec9b0"/>
+  <color name="builtin"   value="#4fc1ff"/>
+  <color name="constant"  value="#569cd6"/>
+  <color name="operator"  value="#d4d4d4"/>
+
+  <style name="text"                     foreground="fg" background="bg"/>
+  <style name="selection"                foreground="fg" background="selection"/>
+  <style name="cursor"                   foreground="#e8e8e8"/>
+  <style name="secondary-cursor"         foreground="#9a9a9a"/>
+  <style name="current-line"             background="#232323"/>
+  <style name="line-numbers"             foreground="dim" background="gutter"/>
+  <style name="current-line-number"      foreground="#c8c8c8" background="gutter" bold="true"/>
+  <style name="bracket-match"            foreground="#ffffff" background="#3a3d41" bold="true"/>
+  <style name="bracket-mismatch"         foreground="#ffffff" background="#7a2a2a" bold="true"/>
+  <style name="search-match"             foreground="#ffffff" background="#4a5a2a"/>
+  <style name="draw-spaces"              foreground="#3a3a3a"/>
+  <style name="right-margin"             foreground="#4a4a4a" background="#4a4a4a"/>
+
+  <style name="def:comment"              foreground="comment" italic="true"/>
+  <style name="def:keyword"              foreground="keyword" bold="true"/>
+  <style name="def:statement"            foreground="keyword" bold="true"/>
+  <style name="def:function"             foreground="function"/>
+  <style name="def:function-definition"  foreground="function" bold="true"/>
+  <style name="def:type"                 foreground="type"/>
+  <style name="def:builtin"              foreground="builtin"/>
+  <style name="def:constant"             foreground="constant"/>
+  <style name="def:boolean"              foreground="constant"/>
+  <style name="def:number"               foreground="number"/>
+  <style name="def:string"               foreground="string"/>
+  <style name="def:special-char"         foreground="#d7ba7d"/>
+  <style name="def:operator"             foreground="operator"/>
+  <style name="def:identifier"           foreground="fg"/>
+  <style name="def:variable"             foreground="#9cdcfe"/>
+  <style name="def:preprocessor"         foreground="#c586c0"/>
+  <style name="def:error"                foreground="#f48771" underline="error"/>
+  <style name="def:warning"              foreground="#e5c07b" underline="single"/>
+  <style name="def:note"                 foreground="#4fc1ff" bold="true"/>
+</style-scheme>

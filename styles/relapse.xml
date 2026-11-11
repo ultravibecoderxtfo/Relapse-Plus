@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="relapse" name="Relapse" version="1.0">
+  <author>Relapse</author>
+  <description>Graphite, almost monochrome.</description>
+
+  <color name="bg" value="#1e1e1e"/>
+  <color name="fg" value="#cfcfcf"/>
+  <color name="dim" value="#555555"/>
+  <color name="line" value="#232323"/>
+  <color name="selection" value="#343434"/>
+  <color name="caret" value="#d2d2d2"/>
+  <color name="comment" value="#666666"/>
+  <color name="string" value="#c9c9c9"/>
+  <color name="keyword" value="#e3e3e3"/>
+  <color name="function" value="#dcdcdc"/>
+  <color name="number" value="#b3b3b3"/>
+  <color name="operator" value="#999999"/>
+  <color name="builtin" value="#cfcfcf"/>
+  <color name="type" value="#d2d2d2"/>
+  <color name="constant" value="#c2c2c2"/>
+  <color name="match" value="#3a3a3a"/>
+
+  <style name="text" foreground="fg" background="bg"/>
+  <style name="selection" foreground="fg" background="selection"/>
+  <style name="cursor" foreground="caret"/>
+  <style name="current-line" background="line"/>
+  <style name="line-numbers" foreground="dim" background="bg"/>
+  <style name="current-line-number" foreground="#999999" background="line"/>
+  <style name="bracket-match" foreground="#ededed" background="match" bold="true"/>
+  <style name="bracket-mismatch" foreground="#e08585" background="match" bold="true"/>
+
+  <style name="def:comment" foreground="comment"/>
+  <style name="def:string" foreground="string"/>
+  <style name="def:keyword" foreground="keyword"/>
+  <style name="def:function" foreground="function"/>
+  <style name="def:number" foreground="number"/>
+  <style name="def:operator" foreground="operator"/>
+  <style name="def:builtin" foreground="builtin"/>
+  <style name="def:type" foreground="type"/>
+  <style name="def:constant" foreground="constant"/>
+  <style name="def:preprocessor" foreground="#a8a8a8"/>
+  <style name="def:identifier" foreground="fg"/>
+</style-scheme>

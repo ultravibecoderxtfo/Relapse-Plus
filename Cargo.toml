@@ -1,0 +1,13 @@
+[package]
+name = "relapse-ui"
+version = "2.0.0"
+edition = "2024"
+
+[[bin]]
+name = "relapse-ui"
+path = "src/main.rs"
+
+[dependencies]
+gtk = { package = "gtk4", version = "0.11.5", features = ["v4_24"] }
+sourceview5 = { version = "0.11.2", features = ["v5_22", "gtk_v4_18"] }
+serde_json = "1"

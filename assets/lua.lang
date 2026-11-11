@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Lua / Luau syntax definition for the Relapse executor UI. -->
+<language id="lua" name="Lua" version="2.0" _section="Script">
+  <metadata>
+    <property name="mimetypes">text/x-lua;application/x-lua</property>
+    <property name="globs">*.lua;*.luau</property>
+    <property name="line-comment-start">--</property>
+    <property name="block-comment-start">--[[</property>
+    <property name="block-comment-end">]]</property>
+  </metadata>
+
+  <styles>
+    <style id="comment" name="Comment" map-to="def:comment"/>
+    <style id="string" name="String" map-to="def:string"/>
+    <style id="keyword" name="Keyword" map-to="def:keyword"/>
+    <style id="escape" name="Escaped Character" map-to="def:special-char"/>
+    <style id="function" name="Function" map-to="def:function"/>
+    <style id="builtin" name="Builtin" map-to="def:builtin"/>
+    <style id="constant" name="Constant" map-to="def:constant"/>
+    <style id="number" name="Number" map-to="def:number"/>
+    <style id="type" name="Type" map-to="def:type"/>
+    <style id="operator" name="Operator" map-to="def:operator"/>
+  </styles>
+
+  <definitions>
+    <context id="lua-escape" style-ref="escape">
+      <match>\\(\d{1,3}|a|b|f|n|r|t|u\{[0-9a-fA-F]+\}|v|x[0-9a-fA-F]{2}|z|\\|"|'|\[|\])</match>
+    </context>
+
+    <context id="label" style-ref="keyword">
+      <match>\:\:?[A-Za-z_][A-Za-z0-9_]*\:\:</match>
+    </context>
+
+    <context id="string" style-ref="string" end-at-line-end="true" class="string" class-disabled="no-spell-check">
+      <start>["']</start>
+      <end>\%{0@start}</end>
+      <include>
+        <context ref="lua-escape"/>
+      </include>
+    </context>
+
+    <context id="multi-line-string" style-ref="string" class="string" class-disabled="no-spell-check">
+      <start>\[(=*)\[</start>
+      <end>]\%{1@start}]</end>
+    </context>
+
+    <context id="block-comment" style-ref="comment" class="comment" class-disabled="no-spell-check">
+      <start>--\[(=*)\[</start>
+      <end>]\%{1@start}]</end>
+      <include>
+        <context ref="def:in-comment"/>
+      </include>
+    </context>
+
+    <context id="line-comment" style-ref="comment" end-at-line-end="true" class="comment" class-disabled="no-spell-check">
+      <start>--</start>
+      <include>
+        <context ref="def:in-comment"/>
+      </include>
+    </context>
+
+    <context id="keywords" style-ref="keyword">
+      <keyword>and</keyword>
+      <keyword>break</keyword>
+      <keyword>continue</keyword>
+      <keyword>do</keyword>
+      <keyword>else</keyword>
+      <keyword>elseif</keyword>
+      <keyword>end</keyword>
+      <keyword>export</keyword>
+      <keyword>for</keyword>
+      <keyword>function</keyword>
+      <keyword>goto</keyword>
+      <keyword>if</keyword>
+      <keyword>in</keyword>
+      <keyword>local</keyword>
+      <keyword>not</keyword>
+      <keyword>or</keyword>
+      <keyword>repeat</keyword>
+      <keyword>return</keyword>
+      <keyword>then</keyword>
+      <keyword>type</keyword>
+      <keyword>until</keyword>
+      <keyword>while</keyword>
+    </context>
+
+    <context id="types" style-ref="type">
+      <keyword>any</keyword>
+      <keyword>boolean</keyword>
+      <keyword>never</keyword>
+      <keyword>number</keyword>
+      <keyword>string</keyword>
+      <keyword>thread</keyword>
+      <keyword>unknown</keyword>
+    </context>
+
+    <context id="builtins" style-ref="builtin">
+      <keyword>assert</keyword>
+      <keyword>collectgarbage</keyword>
+      <keyword>error</keyword>
+      <keyword>getmetatable</keyword>
+      <keyword>ipairs</keyword>
+      <keyword>loadstring</keyword>
+      <keyword>newproxy</keyword>
+      <keyword>next</keyword>
+      <keyword>pairs</keyword>
+      <keyword>pcall</keyword>
+      <keyword>print</keyword>
+      <keyword>rawequal</keyword>
+      <keyword>rawget</keyword>
+      <keyword>rawlen</keyword>
+      <keyword>rawset</keyword>
+      <keyword>require</keyword>
+      <keyword>select</keyword>
+      <keyword>setmetatable</keyword>
+      <keyword>tonumber</keyword>
+      <keyword>tostring</keyword>
+      <keyword>type</keyword>
+      <keyword>typeof</keyword>
+      <keyword>unpack</keyword>
+      <keyword>xpcall</keyword>
+      <keyword>task\.cancel</keyword>
+      <keyword>task\.defer</keyword>
+      <keyword>task\.delay</keyword>
+      <keyword>task\.desynchronize</keyword>
+      <keyword>task\.spawn</keyword>
+      <keyword>task\.synchronize</keyword>
+      <keyword>task\.wait</keyword>
+      <keyword>wait</keyword>
+      <keyword>tick</keyword>
+      <keyword>time</keyword>
+      <keyword>warn</keyword>
+      <keyword>game</keyword>
+      <keyword>workspace</keyword>
+      <keyword>script</keyword>
+      <keyword>shared</keyword>
+      <keyword>plugin</keyword>
+      <keyword>Instance</keyword>
+      <keyword>Vector2</keyword>
+      <keyword>Vector3</keyword>
+      <keyword>CFrame</keyword>
+      <keyword>Color3</keyword>
+      <keyword>UDim</keyword>
+      <keyword>UDim2</keyword>
+      <keyword>Ray</keyword>
+      <keyword>RaycastParams</keyword>
+      <keyword>TweenInfo</keyword>
+      <keyword>Enum</keyword>
+      <keyword>Random</keyword>
+      <keyword>BrickColor</keyword>
+      <keyword>writefile</keyword>
+      <keyword>readfile</keyword>
+      <keyword>appendfile</keyword>
+      <keyword>isfile</keyword>
+      <keyword>listfiles</keyword>
+      <keyword>makefolder</keyword>
+      <keyword>delfile</keyword>
+      <keyword>delfolder</keyword>
+      <keyword>getgenv</keyword>
+      <keyword>getrenv</keyword>
+      <keyword>getgc</keyword>
+      <keyword>gethui</keyword>
+      <keyword>getinstances</keyword>
+      <keyword>getnilinstances</keyword>
+      <keyword>getrawmetatable</keyword>
+      <keyword>setreadonly</keyword>
+      <keyword>isreadonly</keyword>
+      <keyword>hookfunction</keyword>
+      <keyword>hookmetamethod</keyword>
+      <keyword>getconnections</keyword>
+      <keyword>firesignal</keyword>
+      <keyword>fireclickdetector</keyword>
+      <keyword>firetouchinterest</keyword>
+      <keyword>fireproximityprompt</keyword>
+      <keyword>identifyexecutor</keyword>
+      <keyword>setclipboard</keyword>
+      <keyword>setfpscap</keyword>
+      <keyword>getfpscap</keyword>
+      <keyword>queue_on_teleport</keyword>
+      <keyword>request</keyword>
+      <keyword>http\.request</keyword>
+      <keyword>HttpGet</keyword>
+      <keyword>loadstring</keyword>
+      <keyword>getscriptbytecode</keyword>
+      <keyword>decompile</keyword>
+      <keyword>getcallingscript</keyword>
+      <keyword>checkcaller</keyword>
+      <keyword>cloneref</keyword>
+      <keyword>Drawing\.new</keyword>
+    </context>
+
+    <context id="constants" style-ref="constant">
+      <keyword>nil</keyword>
+      <keyword>true</keyword>
+      <keyword>false</keyword>
+      <keyword>math\.huge</keyword>
+      <keyword>math\.pi</keyword>
+      <keyword>_G</keyword>
+      <keyword>_VERSION</keyword>
+    </context>
+
+    <context id="lua-reserved" style-ref="keyword">
+      <match>\b_[A-Z][A-Za-z0-9_]*\b</match>
+    </context>
+
+    <context id="numbers" style-ref="number">
+      <match extended="true">\b(0[xX][0-9a-fA-F]+|\d+(\.\d+)?([eE][+-]?\d+)?)\b</match>
+    </context>
+
+    <context id="operators" style-ref="operator">
+      <match>[-+*/%^#=~&lt;&gt;]</match>
+    </context>
+
+    <context id="lua" class="no-spell-check">
+      <include>
+        <context ref="multi-line-string"/>
+        <context ref="label"/>
+        <context ref="string"/>
+        <context ref="block-comment"/>
+        <context ref="line-comment"/>
+        <context ref="keywords"/>
+        <context ref="types"/>
+        <context ref="builtins"/>
+        <context ref="constants"/>
+        <context ref="lua-reserved"/>
+        <context ref="numbers"/>
+        <context ref="operators"/>
+      </include>
+    </context>
+  </definitions>
+</language>

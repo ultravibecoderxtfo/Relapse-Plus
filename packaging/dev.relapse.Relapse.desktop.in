@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Relapse +
+Comment=GTK4 interface for the Relapse socket protocol
+Exec="@EXEC@"
+TryExec=@EXEC@
+Path=@PROJECT@
+Icon=dev.relapse.Relapse
+Terminal=false
+Categories=Development;
+Keywords=Relapse;Roblox;Lua;Executor;Socket;
+StartupNotify=true
+StartupWMClass=dev.relapse.Relapse

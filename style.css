@@ -1,0 +1,743 @@
+/* Relapse — graphite GTK4 theme */
+
+* {
+  outline-color: alpha(#ffffff, 0.18);
+}
+
+window.relapse-window,
+window.settings-window {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+  font-family: "Adwaita Sans", "Inter", "Cantarell", sans-serif;
+  font-size: 12px;
+}
+
+window.relapse-window .titlebar,
+window.settings-window .titlebar {
+  background: #232323;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  min-height: 0;
+}
+
+.titlebar-inner {
+  background-color: #232323;
+  border-bottom: 1px solid #303030;
+  min-height: 38px;
+  padding: 0;
+}
+
+.titlebar-inner windowhandle {
+  min-height: 38px;
+}
+
+.window-title {
+  color: #9b9b9b;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.title-launch {
+  min-height: 21px;
+  min-width: 0;
+  padding: 0 9px;
+  margin: 0;
+  border: 1px solid #3a6da4;
+  border-radius: 5px;
+  background: #1d3450;
+  background-image: none;
+  box-shadow: none;
+  color: #dceafb;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.title-launch:hover {
+  background-color: #234063;
+  border-color: #4b83bd;
+}
+
+.title-launch:active { background-color: #192c43; }
+
+/* ---------------------------------------------------------------- traffic lights */
+
+.traffic {
+  min-width: 12px;
+  min-height: 12px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 99px;
+  background-image: none;
+  box-shadow: none;
+}
+
+.traffic.red { background-color: #ff5f57; }
+.traffic.yellow { background-color: #febc2e; }
+.traffic.green { background-color: #28c840; }
+.traffic.red:hover { background-color: #ff6f68; }
+.traffic.yellow:hover { background-color: #ffc84a; }
+.traffic.green:hover { background-color: #3ad452; }
+
+.traffic-glyph {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 8px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.traffic:hover .traffic-glyph { opacity: 1; }
+
+/* ------------------------------------------------------------------------ tabs */
+
+.tabbar {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #2f2f2f;
+  min-height: 36px;
+  padding: 0 8px;
+}
+
+.tab {
+  background: transparent;
+  padding: 0 6px 0 10px;
+  min-height: 35px;
+  border-right: 1px solid #2c2c2c;
+  border-radius: 0;
+}
+
+.tab:hover { background-color: #232323; }
+
+.tab.active {
+  background-color: #1e1e1e;
+  box-shadow: inset 0 1px 0 rgba(235, 235, 235, 0.55);
+}
+
+.tab-icon { color: #8c8c8c; }
+.tab.active .tab-icon { color: #b8b8b8; }
+
+.tab-name {
+  color: #8e8e8e;
+  font-size: 11.5px;
+}
+
+.tab.active .tab-name { color: #d4d4d4; }
+
+.dirty-dot {
+  color: #bdbdbd;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-close {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 0;
+  margin: 0 0 0 2px;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #737373;
+  font-size: 14px;
+}
+
+.tab-close:hover {
+  background-color: #343434;
+  color: #dcdcdc;
+}
+
+.tab-new {
+  min-width: 26px;
+  min-height: 26px;
+  padding: 0;
+  margin: 4px 0 4px 4px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #8a8a8a;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tab-new:hover {
+  background-color: #2a2a2a;
+  color: #d8d8d8;
+}
+
+/* --------------------------------------------------------------------- editor */
+
+.editor-scroll,
+.editor-scroll viewport { background-color: #1e1e1e; }
+
+.editor,
+.editor text {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  caret-color: #d4d4d4;
+  font-family: "MesloLGS Nerd Font Mono", "Adwaita Mono", "Noto Sans Mono", monospace;
+  font-size: 13px;
+  outline: none;
+}
+
+.editor border {
+  background-color: #1e1e1e;
+}
+
+.tab.read-only .tab-name { font-style: italic; color: #9a9a9a; }
+
+/* -------------------------------------------------------------------- sidebar */
+
+.scripts-panel {
+  background-color: #262626;
+  border-left: 1px solid #303030;
+}
+
+.panel-title {
+  color: #8b8b8b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.scripts-list { padding: 0 8px 10px 8px; }
+
+.script-row {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  background-image: none;
+  padding: 5px 7px;
+  min-height: 26px;
+  color: #c6c6c6;
+}
+
+.script-row:hover { background-color: #2e2e2e; }
+.script-row.active { background-color: transparent; }
+.script-row.active .script-name { color: #d2d2d2; }
+
+.script-icon { color: #8f8f8f; }
+
+.script-name {
+  color: #c6c6c6;
+  font-size: 11.5px;
+}
+
+.script-empty {
+  color: #6a6a6a;
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+/* -------------------------------------------------------------------- toolbar */
+
+.toolbar {
+  background-color: #202020;
+  border-top: 1px solid #303030;
+  min-height: 42px;
+  padding: 0 10px;
+}
+
+.theme-row-active { color: #63d38c; font-size: 10px; font-weight: 600; }
+.theme-swatches { font-size: 10px; }
+
+.client-row { min-height: 52px; }
+.client-avatar { min-width: 36px; min-height: 36px; }
+.client-cookie { color: #63d38c; font-size: 9.5px; }
+
+.tool-button {
+  min-height: 24px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #bcbcbc;
+  font-size: 11.5px;
+}
+
+.tool-button:hover {
+  background-color: #2a2a2a;
+  color: #e3e3e3;
+}
+
+.tool-button:active { background-color: #262626; }
+
+.exec-button {
+  min-height: 24px;
+  min-width: 0;
+  padding: 0 14px;
+  margin: 0;
+  border: 1px solid #2c5f9e;
+  border-radius: 5px;
+  background: #1a2c44;
+  background-image: none;
+  box-shadow: none;
+  color: #dbe8fb;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.exec-button:hover {
+  background-color: #1f3552;
+  border-color: #3d78bd;
+}
+
+.exec-button:active { background-color: #17263a; }
+
+.gear-button {
+  min-width: 30px;
+  padding: 0;
+}
+
+.gear-icon { color: #b0b0b0; }
+
+/* --------------------------------------------------------------- instance pill */
+
+.instance-pill {
+  min-height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #d2d2d2;
+  font-size: 10.8px;
+  font-weight: 600;
+}
+
+.instance-pill > button {
+  min-height: 24px;
+  padding: 0 8px 0 10px;
+  border: 1px solid #4a4a4a;
+  border-radius: 7px;
+  background: #3a3a3a;
+  background-image: none;
+  box-shadow: none;
+  color: #d2d2d2;
+}
+
+.instance-pill > button:hover {
+  background-color: #444444;
+  border-color: #585858;
+}
+
+.instance-pill > button:active { background-color: #333333; }
+
+.instance-pill.attached-pill > button {
+  border-color: #3b7150;
+  background-color: #2c5a40;
+  color: #b9ecce;
+}
+
+.instance-pill.attached-pill > button:hover {
+  background-color: #356b4c;
+  border-color: #4b8762;
+}
+
+.pill-chevron { color: #9a9a9a; }
+.attached-pill .pill-chevron { color: #9fe0b4; }
+
+/* -------------------------------------------------------------------- popover */
+
+popover.instances-popover,
+popover.instances-popover > contents {
+  background-color: #242424;
+  border-radius: 8px;
+}
+
+popover.instances-popover {
+  border: 1px solid #383838;
+}
+
+.popover-body { padding: 12px; }
+
+.popover-title {
+  color: #8d8d8d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.pop-status { color: #8f8f8f; font-size: 10.5px; }
+.pop-status.ok { color: #79c894; }
+.pop-status.bad { color: #b98282; }
+
+.pop-name { color: #d0d0d0; font-size: 11.5px; }
+.pop-meta { color: #787878; font-size: 10px; }
+.pop-divider { background-color: #333333; min-height: 1px; }
+
+.instance-dot {
+  min-width: 6px;
+  min-height: 6px;
+  border-radius: 99px;
+  background-color: #555555;
+}
+
+.instance-dot.on { background-color: #63d38c; }
+
+.pop-action {
+  min-height: 19px;
+  min-width: 0;
+  padding: 0 7px;
+  margin: 0;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  background: #2a2a2a;
+  background-image: none;
+  box-shadow: none;
+  color: #c8c8c8;
+  font-size: 9.5px;
+}
+
+.pop-action:hover {
+  background-color: #333333;
+  border-color: #4a4a4a;
+}
+
+.pop-action.inject {
+  border-color: #3b5c7a;
+  color: #9cc7f0;
+}
+
+.pop-action.inject:hover {
+  border-color: #4b76a0;
+  color: #b9d8f8;
+}
+
+.pop-footer { color: #5f5f5f; font-size: 9.5px; }
+
+/* -------------------------------------------------------------------- console */
+
+.console-panel {
+  background-color: #191919;
+  border-top: 1px solid #303030;
+}
+
+.console-head {
+  background-color: #1f1f1f;
+  min-height: 30px;
+  padding: 0 8px 0 14px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.console-title {
+  color: #8b8b8b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.console-note {
+  color: #5e5e5e;
+  font-size: 9.5px;
+}
+
+.console-filter {
+  min-height: 19px;
+  min-width: 0;
+  padding: 0 7px;
+  margin: 0;
+  border: 1px solid #343434;
+  border-radius: 4px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #8a8a8a;
+  font-size: 9.5px;
+  font-weight: 600;
+}
+
+.console-filter:hover {
+  background-color: #2b2b2b;
+  color: #d0d0d0;
+}
+
+.console-filter:checked {
+  background-color: #24384d;
+  border-color: #3a6da4;
+  color: #9cc7f0;
+}
+
+.console-action:checked {
+  color: #9cc7f0;
+  background-color: #24384d;
+}
+
+.console-action {
+  min-height: 22px;
+  padding: 0 7px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #8d8d8d;
+  font-size: 10px;
+}
+
+.console-action:hover {
+  background-color: #2b2b2b;
+  color: #d0d0d0;
+}
+
+.console-text {
+  background-color: #191919;
+  color: #c4c4c4;
+  font-family: "MesloLGS Nerd Font Mono", "Adwaita Mono", monospace;
+  font-size: 11.3px;
+  padding: 7px 12px;
+}
+
+/* ---------------------------------------------------------------------- toast */
+
+.toast {
+  background-color: rgba(44, 44, 44, 0.98);
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+  padding: 8px 14px;
+  color: #d6d6d6;
+  font-size: 11.5px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+}
+
+/* -------------------------------------------------------------------- scrollbar */
+
+scrollbar {
+  background: transparent;
+  border: none;
+}
+
+scrollbar slider {
+  background-color: #3d3d3d;
+  border-radius: 4px;
+  min-width: 6px;
+  min-height: 6px;
+  margin: 2px;
+}
+
+scrollbar slider:hover { background-color: #4a4a4a; }
+
+/* --------------------------------------------------------------------- settings */
+
+.settings-titlebar {
+  background-color: #232323;
+  border-bottom: 1px solid #303030;
+  min-height: 54px;
+  padding: 0 16px;
+}
+
+.settings-header-title {
+  color: #dedede;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+.settings-header-subtitle {
+  color: #7a7a7a;
+  font-size: 10.5px;
+}
+
+.settings-launch {
+  min-height: 30px;
+  padding: 0 16px;
+  border: 1px solid #3a6da4;
+  border-radius: 6px;
+  background: #1d3450;
+  background-image: none;
+  box-shadow: none;
+  color: #dceafb;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.settings-launch:hover {
+  background-color: #234063;
+  border-color: #4b83bd;
+}
+
+.settings-launch:active { background-color: #192c43; }
+
+.settings-launch:disabled {
+  background: #262626;
+  border-color: #363636;
+  color: #6a6a6a;
+}
+
+.settings-done {
+  min-height: 30px;
+  padding: 0 14px;
+  border: 1px solid #3b3b3b;
+  border-radius: 6px;
+  background: #2b2b2b;
+  background-image: none;
+  box-shadow: none;
+  color: #c9c9c9;
+  font-size: 11.5px;
+}
+
+.settings-done:hover {
+  background-color: #353535;
+  border-color: #494949;
+}
+
+.settings-scroll { background-color: #1e1e1e; }
+.settings-body { padding: 20px 22px 22px 22px; }
+
+.settings-label {
+  color: #7f7f7f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.settings-card {
+  background-color: #242424;
+  border: 1px solid #323232;
+  border-radius: 9px;
+}
+
+.settings-card-row { padding: 11px 14px; }
+
+.settings-divider {
+  background-color: #303030;
+  min-height: 1px;
+  margin: 0 14px;
+}
+
+.settings-key { color: #8d8d8d; font-size: 11.2px; }
+.settings-value { color: #cfcfcf; font-size: 11.2px; }
+
+.settings-value.mono {
+  color: #b6b6b6;
+  font-family: "MesloLGS Nerd Font Mono", "Adwaita Mono", monospace;
+  font-size: 10.2px;
+}
+
+.settings-value-title {
+  color: #d6d6d6;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-value-title.bad { color: #c98686; }
+.settings-hint { color: #787878; font-size: 10.3px; }
+
+.status-dot {
+  min-width: 7px;
+  min-height: 7px;
+  border-radius: 99px;
+  background-color: #5a5a5a;
+}
+
+.status-dot.ok { background-color: #63d38c; }
+.status-dot.bad { background-color: #c17c7c; }
+
+.settings-path-field {
+  background-color: #1b1b1b;
+  border: 1px solid #303030;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.settings-path {
+  color: #bcbcbc;
+  font-family: "MesloLGS Nerd Font Mono", "Adwaita Mono", monospace;
+  font-size: 10.2px;
+}
+
+.settings-path.empty {
+  color: #6b6b6b;
+  font-family: "Adwaita Sans", "Inter", "Cantarell", sans-serif;
+  font-size: 10.8px;
+}
+
+.settings-launch-status {
+  color: #7c7c7c;
+  font-size: 10.3px;
+}
+
+.settings-launch-status.ok { color: #7ac996; }
+.settings-launch-status.bad { color: #cf8686; }
+
+.settings-inline-button {
+  min-height: 24px;
+  padding: 0 9px;
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  background: #2a2a2a;
+  background-image: none;
+  box-shadow: none;
+  color: #c1c1c1;
+  font-size: 10.5px;
+}
+
+.settings-inline-button:hover {
+  background-color: #333333;
+  border-color: #4a4a4a;
+  color: #dedede;
+}
+
+.settings-inline-button:disabled {
+  background: #242424;
+  border-color: #313131;
+  color: #5f5f5f;
+}
+
+.settings-switch trough {
+  background-color: #3b3b3b;
+  border-radius: 99px;
+  min-width: 34px;
+  min-height: 20px;
+}
+
+.settings-switch:checked trough { background-color: #376b9f; }
+
+.settings-switch slider {
+  background-color: #e6e6e6;
+  border-radius: 99px;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px;
+}
+
+.settings-switch:checked slider { background-color: #f2f2f2; }
+
+.settings-footer { color: #5f5f5f; font-size: 9.5px; }
+
+.trace-scroll {
+  background-color: #1a1a1a;
+  border: 1px solid #2f2f2f;
+  border-radius: 5px;
+}
+
+.trace-text {
+  background-color: #1a1a1a;
+  color: #bdbdbd;
+  font-family: "MesloLGS Nerd Font Mono", "Adwaita Mono", monospace;
+  font-size: 10.3px;
+  padding: 8px 10px;
+}
+
+/* ---------------------------------------------------------------------- tooltip */
+
+tooltip {
+  background-color: #2a2a2a;
+  color: #d0d0d0;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 4px 7px;
+  font-size: 10.5px;
+}
