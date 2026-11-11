@@ -108,4 +108,4 @@ PROTOCOL.md          socket wire format
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Relapse + is licensed under the GNU General Public License, version 3 or later (GPL-3.0-or-later). You can use and modify it privately. If you distribute the app or a modified version, you must license the distributed work under the GPL and provide recipients with the corresponding source code. See [LICENSE](LICENSE) for the full terms.
