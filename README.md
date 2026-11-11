@@ -14,7 +14,7 @@ several accounts side by side.
 ## Install with one command
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/OWNER/Relapse-Plus/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ultravibecoderxtfo/Relapse-Plus/main/install.sh | bash
 ```
 
 That downloads the source into `~/.local/share/relapse-plus`, installs the GTK 4
@@ -35,7 +35,7 @@ Start it afterwards from the app menu or with:
 ## Manual install
 
 ```bash
-git clone https://github.com/OWNER/Relapse-Plus.git
+git clone https://github.com/ultravibecoderxtfo/Relapse-Plus.git
 cd Relapse-Plus
 ./run.sh                 # build + run
 ./packaging/install-app.sh   # optional: add to the app menu

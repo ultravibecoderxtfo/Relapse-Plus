@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Relapse + — one-command installer for Linux.
 #
-#   curl -fsSL https://raw.githubusercontent.com/OWNER/Relapse-Plus/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/ultravibecoderxtfo/Relapse-Plus/main/install.sh | bash
 #
 # Environment overrides:
 #   RELAPSE_PLUS_REPO=owner/repo     GitHub repository slug
@@ -10,7 +10,7 @@
 #   RELAPSE_PLUS_SKIP_DEPS=1         do not touch system packages
 set -euo pipefail
 
-REPO_SLUG="${RELAPSE_PLUS_REPO:-OWNER/Relapse-Plus}"
+REPO_SLUG="${RELAPSE_PLUS_REPO:-ultravibecoderxtfo/Relapse-Plus}"
 INSTALL_DIR="${RELAPSE_PLUS_DIR:-$HOME/.local/share/relapse-plus}"
 BRANCH="${RELAPSE_PLUS_BRANCH:-main}"
 
